@@ -40,7 +40,7 @@ export class App {
   activeBottomNav = 'dashboard';
  
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
   bnavIds = ['dashboard', 'admissions', 'fees', 'attendance'];
   go1(section: string) {
     this.activeSection = section;

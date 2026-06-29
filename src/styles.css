@@ -239,6 +239,8 @@ tr:last-child td{border-bottom:none;}
 .bnav-item.active{background:var(--blue-lt);}
 
 /* MOBILE CONTENT PADDING */
+
+
 @media(max-width:768px){
   body{flex-direction:column;height:100dvh;overflow:hidden;}
   #hamburger{display:flex;}
@@ -313,3 +315,5 @@ tr:last-child td{border-bottom:none;}
   .result-grid{grid-template-columns:repeat(2,1fr);}
   
 }
+
+

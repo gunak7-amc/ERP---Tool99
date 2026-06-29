@@ -14,11 +14,13 @@ import { Placement } from './modules/placement/placement/placement';
 import { Reports } from './modules/reports/reports/reports';
 import { Settings } from './modules/settings/settings/settings';
 import { Transport } from './modules/transport/transport/transport';
+import { Login } from './modules/login/login/login';
 
 
 
 export const routes: Routes = [
     { path: '', component: Dashboard },
+    { path: 'login', component: Login },
     { path: 'dashboard', component: Dashboard },
     { path: 'timetable', component: Timetable },
     { path: 'admissions', component: Admissions },

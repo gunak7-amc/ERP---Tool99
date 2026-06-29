@@ -1,1 +1,101 @@
-<p>login works!</p>
+
+<div class="login-page">
+
+  <!-- Left Side -->
+  <div class="login-left">
+    <div class="overlay">
+      <img src="assets/logo.png" class="logo" alt="College Logo">
+
+      <h1>College ERP</h1>
+
+      <p>
+        Manage Admissions, Students, Faculty, Attendance,
+        Fees, Examinations and Reports from one platform.
+      </p>
+
+      <div class="features">
+        <div>✔ Smart Campus Management</div>
+        <div>✔ Secure & Cloud Based</div>
+        <div>✔ Student & Faculty Portal</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="login-right">
+
+    <div class="login-card">
+
+      <h2>Welcome Back</h2>
+
+      <p class="subtitle">
+        Sign in to continue
+      </p>
+
+      <form>
+
+        <div class="input-group">
+          <label>Email Address</label>
+         <input type="email" [(ngModel)]="email" name="email" [disabled]="otpSent"  placeholder="Enter Email">   </div>
+
+        <div class="input-group">
+          <label>Password</label>
+        <input type="password" [(ngModel)]="password" name="password" [disabled]="otpSent" placeholder="Enter Password">
+        </div>
+
+     
+
+        
+  <button
+    type="button"
+    *ngIf="!otpSent"
+    (click)="login()">
+
+    Login
+
+  </button>
+
+
+  <!-- OTP -->
+
+  <div class="input-group" *ngIf="otpSent">
+
+    <label>Enter OTP</label>
+
+    <input
+      type="text"
+      maxlength="6"
+      [(ngModel)]="otp"
+      name="otp"
+      placeholder="Enter OTP">
+
+  </div>
+
+  <!-- Verify Button -->
+
+  <button
+    type="button"
+    *ngIf="otpSent"
+    (click)="verifyOTP()">
+
+    Verify OTP
+
+  </button>
+
+        <div class="options">
+          <label>
+            <input type="checkbox">
+            Remember Me
+          </label>
+
+          <a href="#">Forgot Password?</a>
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
