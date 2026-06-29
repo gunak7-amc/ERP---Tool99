@@ -16,8 +16,9 @@ import { Settings } from './modules/settings/settings/settings';
 import { Transport } from './modules/transport/transport/transport';
 
 
+
 export const routes: Routes = [
-    { path: '', component: App },
+    { path: '', component: Dashboard },
     { path: 'dashboard', component: Dashboard },
     { path: 'timetable', component: Timetable },
     { path: 'admissions', component: Admissions },

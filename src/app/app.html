@@ -1,141 +1,38 @@
-<div id="sidebar-overlay" onclick="closeSidebar()"></div>
-<nav id="sidebar" aria-label="Main navigation">
-  <div class="logo">
-    <div class="logo-name"><i class="ti ti-school" style="font-size:18px;vertical-align:-3px;margin-right:4px;" aria-hidden="true"></i>ERP-Tool99</div>
-    <div class="logo-sub">College Management System</div>
+  <app-sidebar></app-sidebar>
+
+  <div id="main">
+    <router-outlet></router-outlet>
   </div>
 
-  <div class="nav-group-label">Overview</div>
-  <div class="nav-item" [class.active]="activeSection === 'dashboard'"     (click)="go1('dashboard')"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>  Dashboard</div>
-  <div class="nav-item" (click)="go('ai')" [class.active]="activeSection === 'ai'">  <i class="ti ti-brain"></i> AI Insights <span class="nav-badge">3</span>
-</div>
- <div class="nav-group-label">Academics</div>
 
-<div class="nav-item" (click)="go1('admissions')" [class.active]="activeSection==='admissions'">
-  <i class="ti ti-file-plus"></i> Admissions
-</div>
 
-<div class="nav-item" (click)="go1('attendance')" [class.active]="activeSection==='attendance'">
-  <i class="ti ti-calendar-check"></i> Attendance
-</div>
-
-<div class="nav-item" (click)="go1('exams')" [class.active]="activeSection==='exams'">
-  <i class="ti ti-clipboard-list"></i> Examinations
-</div>
-
-<div class="nav-item" (click)="go1('timetable')" [class.active]="activeSection==='timetable'">
-  <i class="ti ti-calendar-time"></i> Timetable
-</div>
-
-<div class="nav-group-label">Finance & HR</div>
-
-<div class="nav-item" (click)="go1('fees')" [class.active]="activeSection==='fees'">
-  <i class="ti ti-receipt-rupee"></i> Fees & Accounts
-</div>
-
-<div class="nav-item" (click)="go1('faculty')" [class.active]="activeSection==='faculty'">
-  <i class="ti ti-chalkboard"></i> Faculty & HR
-</div>
-<div class="nav-group-label">Student Services</div>
-
-<div class="nav-item" (click)="go1('hostel')" [class.active]="activeSection==='hostel'">
-  <i class="ti ti-building"></i> Hostel
-</div>
-
-<div class="nav-item" (click)="go1('transport')" [class.active]="activeSection==='transport'">
-  <i class="ti ti-bus"></i> Transport
-</div>
-
-<div class="nav-item" (click)="go1('library')" [class.active]="activeSection==='library'">
-  <i class="ti ti-books"></i> Library
-</div>
-
-<div class="nav-item" (click)="go1('placement')" [class.active]="activeSection==='placement'">
-  <i class="ti ti-briefcase"></i> Placement Cell
-</div>
-
-<div class="nav-item" (click)="go1('alumni')" [class.active]="activeSection==='alumni'">
-  <i class="ti ti-users-group"></i> Alumni Network
-</div>
-<div class="nav-group-label">Admin</div>
-
-<div class="nav-item" (click)="go1('reports')" [class.active]="activeSection==='reports'">
-  <i class="ti ti-chart-bar"></i> Reports
-</div>
-
-<div class="nav-item" (click)="go1('settings')" [class.active]="activeSection==='settings'">
-  <i class="ti ti-settings"></i> Settings
-</div>
-  <!--div class="nav-item active" (click)="go('dashboard',this)"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Dashboard</div>
- 
-  <div class="nav-item" onclick="go('ai',this)"><i class="ti ti-brain" aria-hidden="true"></i> AI Insights <span class="nav-badge">3</span></div>
-
-  <div class="nav-group-label">Academics</div>
-  <div class="nav-item" onclick="go('admissions',this)"><i class="ti ti-file-plus" aria-hidden="true"></i> Admissions</div>
-  <div class="nav-item" onclick="go('attendance',this)"><i class="ti ti-calendar-check" aria-hidden="true"></i> Attendance</div>
-  <div class="nav-item" onclick="go('exams',this)"><i class="ti ti-clipboard-list" aria-hidden="true"></i> Examinations</div>
-  <div class="nav-item" onclick="go('timetable',this)"><i class="ti ti-calendar-time" aria-hidden="true"></i> Timetable</div>
-
-  <div class="nav-group-label">Finance & HR</div>
-  <div class="nav-item" onclick="go('fees',this)"><i class="ti ti-receipt-rupee" aria-hidden="true"></i> Fees & Accounts</div>
-  <div class="nav-item" onclick="go('faculty',this)"><i class="ti ti-chalkboard" aria-hidden="true"></i> Faculty & HR</div>
-
-  <div class="nav-group-label">Student Services</div>
-  <div class="nav-item" onclick="go('hostel',this)"><i class="ti ti-building" aria-hidden="true"></i> Hostel</div>
-  <div class="nav-item" onclick="go('transport',this)"><i class="ti ti-bus" aria-hidden="true"></i> Transport</div>
-  <div class="nav-item" onclick="go('library',this)"><i class="ti ti-books" aria-hidden="true"></i> Library</div>
-  <div class="nav-item" onclick="go('placement',this)"><i class="ti ti-briefcase" aria-hidden="true"></i> Placement Cell</div>
-  <div class="nav-item" onclick="go('alumni',this)"><i class="ti ti-users-group" aria-hidden="true"></i> Alumni Network</div>
-
-  <div class="nav-group-label">Admin</div>
-  <div class="nav-item" onclick="go('reports',this)"><i class="ti ti-chart-bar" aria-hidden="true"></i> Reports</div>
-  <div class="nav-item" onclick="go('settings',this)"><i class="ti ti-settings" aria-hidden="true"></i> Settings</div-->
-
-  <div class="sidebar-footer">
-    <div class="user-row">
-      <div class="user-avatar">RA</div>
-      <div><div class="user-name">Registrar Admin</div><div class="user-role">Super Admin</div></div>
+  <!-- BOTTOM NAV (mobile) -->
+  <div id="bottom-nav" role="navigation" aria-label="Quick navigation">
+    <div class="bnav-inner">
+      <!--div class="bnav-item active" id="bnav-dashboard" (click)="go1('dashboard',document.querySelector('.nav-item'));setBottomNav('dashboard')"><i class="ti ti-layout-dashboard" aria-hidden="true"></i><span>Home</span></div>
+      
+      <div class="bnav-item" id="bnav-admissions" (click)="go1('admissions',null);setBottomNav('admissions')"><i class="ti ti-file-plus" aria-hidden="true"></i><span>Admissions</span></div>
+      <div class="bnav-item" id="bnav-fees" (click)="go1('fees',null);setBottomNav('fees')"><i class="ti ti-receipt-rupee" aria-hidden="true"></i><span>Fees</span></div>
+      <div class="bnav-item" id="bnav-attendance" (click)="go1('attendance',null);setBottomNav('attendance')"><i class="ti ti-calendar-check" aria-hidden="true"></i><span>Attend.</span></div>
+      <div class="bnav-item" id="bnav-more" (click)="toggleSidebar()"><i class="ti ti-dots" aria-hidden="true"></i><span>More</span></div-->
+    <div class="bnav-item" [class.active]="activeSection === 'dashboard'" (click)="go1('dashboard')"> <i
+        class="ti ti-layout-dashboard"></i> <span>Home</span></div>
+    <div class="bnav-item" [class.active]="activeSection === 'admissions'" (click)="go1('admissions')">
+      <i class="ti ti-file-plus"></i><span>Admissions</span> </div>
+    
+    <div class="bnav-item" [class.active]="activeSection === 'fees'" (click)="go1('fees')">
+      <i class="ti ti-receipt-rupee"></i><span>Fees</span> </div>
+    
+    <div class="bnav-item" [class.active]="activeSection === 'attendance'" (click)="go1('attendance')">
+      <i class="ti ti-calendar-check"></i> <span>Attend.</span> </div>
+    
+    <div class="bnav-item" (click)="toggleSidebar()">
+      <i class="ti ti-dots"></i>
+      <span>More</span>
     </div>
-  </div>
- 
-</nav>
+    
+    </div>
+    </div>
 
-<div id="main">
-  <router-outlet></router-outlet>
-</div>
-
-
-
-
-
-
-<!-- BOTTOM NAV (mobile) -->
-<div id="bottom-nav" role="navigation" aria-label="Quick navigation">
-  <div class="bnav-inner">
-    <!--div class="bnav-item active" id="bnav-dashboard" (click)="go1('dashboard',document.querySelector('.nav-item'));setBottomNav('dashboard')"><i class="ti ti-layout-dashboard" aria-hidden="true"></i><span>Home</span></div>
-     
-    <div class="bnav-item" id="bnav-admissions" (click)="go1('admissions',null);setBottomNav('admissions')"><i class="ti ti-file-plus" aria-hidden="true"></i><span>Admissions</span></div>
-    <div class="bnav-item" id="bnav-fees" (click)="go1('fees',null);setBottomNav('fees')"><i class="ti ti-receipt-rupee" aria-hidden="true"></i><span>Fees</span></div>
-    <div class="bnav-item" id="bnav-attendance" (click)="go1('attendance',null);setBottomNav('attendance')"><i class="ti ti-calendar-check" aria-hidden="true"></i><span>Attend.</span></div>
-    <div class="bnav-item" id="bnav-more" (click)="toggleSidebar()"><i class="ti ti-dots" aria-hidden="true"></i><span>More</span></div-->
-  <div class="bnav-item" [class.active]="activeSection === 'dashboard'" (click)="go1('dashboard')"> <i
-      class="ti ti-layout-dashboard"></i> <span>Home</span></div>
-  <div class="bnav-item" [class.active]="activeSection === 'admissions'" (click)="go1('admissions')">
-    <i class="ti ti-file-plus"></i><span>Admissions</span> </div>
-  
-  <div class="bnav-item" [class.active]="activeSection === 'fees'" (click)="go1('fees')">
-    <i class="ti ti-receipt-rupee"></i><span>Fees</span> </div>
-  
-  <div class="bnav-item" [class.active]="activeSection === 'attendance'" (click)="go1('attendance')">
-    <i class="ti ti-calendar-check"></i> <span>Attend.</span> </div>
-  
-  <div class="bnav-item" (click)="toggleSidebar()">
-    <i class="ti ti-dots"></i>
-    <span>More</span>
-  </div>
-  
-  </div>
-  </div>
-  
 
 

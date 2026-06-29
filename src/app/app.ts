@@ -1,15 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { AdmissionsRoutingModule } from "./modules/admissions/admissions-routing-module";
 import { CommonModule, NgIf } from '@angular/common';
-
+import { Sidebar } from './layout/sidebar/sidebar';
 import { DashboardModule } from './modules/dashboard/dashboard-module';
 import { Router } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AdmissionsRoutingModule,CommonModule, DashboardModule],
+  imports: [AdmissionsRoutingModule,CommonModule, DashboardModule, Sidebar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -37,7 +38,7 @@ export class App {
 
   activeSection = 'dashboard';
   activeBottomNav = 'dashboard';
-  activeTab = 'dashboard';
+ 
 
   constructor(private router: Router) { }
   bnavIds = ['dashboard', 'admissions', 'fees', 'attendance'];
@@ -67,7 +68,7 @@ export class App {
         this.closeSidebar();
       }
     }
-
+ activeTab = 'dashboard';
     switchTab(panelId: string): void {
       this.activeTab = panelId;
     }
