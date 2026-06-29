@@ -3,6 +3,7 @@ import { AdmissionsRoutingModule } from "./modules/admissions/admissions-routing
 import { CommonModule, NgIf } from '@angular/common';
 
 import { DashboardModule } from './modules/dashboard/dashboard-module';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,6 +36,22 @@ export class App {
 };
 
 activeSection = 'dashboard';
+activeBottomNav = 'dashboard';
+
+ constructor(private router: Router) {}
+ bnavIds = ['dashboard', 'admissions', 'fees', 'attendance'];
+  go1(section: string) {
+    this.activeSection = section;
+    this.router.navigate([section]);
+
+     const match = this.bnavIds.find(id =>
+      section.toLowerCase().includes(id) ||
+      section.toLowerCase().includes(this.titles[id].toLowerCase())
+    );
+
+     if (match) {
+      this.activeBottomNav = match;
+  }
 
 go(id: string) {
   this.activeSection = id;
@@ -48,6 +65,12 @@ go(id: string) {
     this.closeSidebar();
   }
 }
+
+activeTab = 'dashboard';
+
+  switchTab(panelId: string): void {
+    this.activeTab = panelId;
+  }
 closeSidebar() {
   document.getElementById('sidebar')?.classList.remove('open');
   document.getElementById('sidebar-overlay')?.classList.remove('open');

@@ -1,0 +1,606 @@
+
+  <div id="topbar">
+    <div id="hamburger" (click)="toggleSidebar()" aria-label="Open menu">  <i class="ti ti-menu-2" aria-hidden="true"></i></div>
+    <!--div id="hamburger" onclick="toggleSidebar()" aria-label="Open menu"><i class="ti ti-menu-2" aria-hidden="true"></i></div-->
+    <div class="page-title" id="page-title">Dashboard</div>
+    <div class="topbar-chip"><i class="ti ti-calendar" aria-hidden="true"></i> AY 2025–26 | Semester 1</div>
+    <div class="topbar-chip"><i class="ti ti-building-bank" aria-hidden="true"></i> AMC Engineering College</div>
+    <div class="notif-btn" title="Notifications"><i class="ti ti-bell" style="font-size:17px;color:var(--text2);" aria-hidden="true"></i><div class="notif-dot"></div></div>
+  </div>
+
+  <div id="content">
+
+    <!-- ===== DASHBOARD ===== -->
+    <div id="sec-dashboard" class="sec active">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-users" style="color:var(--blue);" aria-hidden="true"></i>Total Students</div><div class="kpi-val">4,218</div><div class="kpi-delta up">↑ 312 new this year</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:74%;background:var(--blue);"></div></div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-chalkboard" style="color:var(--teal);" aria-hidden="true"></i>Faculty</div><div class="kpi-val">187</div><div class="kpi-delta up">↑ 12 new joins</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:62%;background:var(--teal);"></div></div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-report-money" style="color:var(--green);" aria-hidden="true"></i>Fees Collected</div><div class="kpi-val">₹2.4 Cr</div><div class="kpi-delta up">↑ 8% vs last term</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:70%;background:var(--green);"></div></div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-calendar-stats" style="color:var(--amber);" aria-hidden="true"></i>Avg Attendance</div><div class="kpi-val">82%</div><div class="kpi-delta down">↓ 3% this month</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:82%;background:var(--amber);"></div></div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-chart-bar" aria-hidden="true"></i>Department Enrollment</div>
+          <div class="bar-chart">
+            <div class="bar-col"><div class="bar-val-lbl">840</div><div class="bar-body hi" style="height:100px;"></div><div class="bar-x-lbl">CSE</div></div>
+            <div class="bar-col"><div class="bar-val-lbl">620</div><div class="bar-body" style="height:74px;"></div><div class="bar-x-lbl">ECE</div></div>
+            <div class="bar-col"><div class="bar-val-lbl">510</div><div class="bar-body" style="height:61px;"></div><div class="bar-x-lbl">Mech</div></div>
+            <div class="bar-col"><div class="bar-val-lbl">490</div><div class="bar-body" style="height:58px;"></div><div class="bar-x-lbl">Civil</div></div>
+            <div class="bar-col"><div class="bar-val-lbl">380</div><div class="bar-body" style="height:45px;"></div><div class="bar-x-lbl">MBA</div></div>
+            <div class="bar-col"><div class="bar-val-lbl">310</div><div class="bar-body" style="height:37px;"></div><div class="bar-x-lbl">BCA</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-activity" aria-hidden="true"></i>Recent Activity</div>
+          <div class="activity-feed">
+            <div class="act"><div class="act-icon" style="background:var(--blue-lt);color:var(--blue);"><i class="ti ti-file-plus" aria-hidden="true"></i></div><div><div class="act-text">32 new admission applications received</div><div class="act-time">Today, 10:30 AM</div></div></div>
+            <div class="act"><div class="act-icon" style="background:var(--amber-lt);color:var(--amber);"><i class="ti ti-receipt-rupee" aria-hidden="true"></i></div><div><div class="act-text">Fee paid: ₹18,500 by Ravi Sharma (CS-3B)</div><div class="act-time">Today, 9:15 AM</div></div></div>
+            <div class="act"><div class="act-icon" style="background:var(--green-lt);color:var(--green);"><i class="ti ti-award" aria-hidden="true"></i></div><div><div class="act-text">Exam results published — 3rd Sem CS</div><div class="act-time">Yesterday, 5:00 PM</div></div></div>
+            <div class="act"><div class="act-icon" style="background:var(--purple-lt);color:var(--purple);"><i class="ti ti-briefcase" aria-hidden="true"></i></div><div><div class="act-text">Infosys campus drive confirmed — 120 seats</div><div class="act-time">Yesterday, 2:00 PM</div></div></div>
+            <div class="act"><div class="act-icon" style="background:var(--teal-lt);color:var(--teal);"><i class="ti ti-bus" aria-hidden="true"></i></div><div><div class="act-text">Route 4 (Tambaram) delayed by 20 min</div><div class="act-time">Yesterday, 8:40 AM</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-file-text" aria-hidden="true"></i>Recent Admissions</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Name</th><th>Course</th><th>Dept</th><th>Category</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Priya Menon</td><td>B.Tech</td><td>CSE</td><td>General</td><td>12 Jun 2025</td><td><span class="pill pill-green">Confirmed</span></td></tr>
+            <tr><td class="td-name">Arjun Patel</td><td>MBA</td><td>Mgmt</td><td>OBC</td><td>10 Jun 2025</td><td><span class="pill pill-green">Confirmed</span></td></tr>
+            <tr><td class="td-name">Sneha Iyer</td><td>B.Tech</td><td>ECE</td><td>SC</td><td>09 Jun 2025</td><td><span class="pill pill-amber">Docs Pending</span></td></tr>
+            <tr><td class="td-name">Rahul Nair</td><td>BCA</td><td>CS</td><td>General</td><td>08 Jun 2025</td><td><span class="pill pill-blue">Under Review</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== AI INSIGHTS ===== -->
+    <div id="sec-ai" class="sec">
+      <div class="ai-grid">
+        <div class="ai-card risk"><div class="ai-tag">⚠ Attendance Risk</div><div class="ai-title">8 students below 65%</div><div class="ai-desc">Predicted to fall short of 75% requirement before end-sem. Early intervention recommended.</div></div>
+        <div class="ai-card warn"><div class="ai-tag">💰 Fee Defaulter Risk</div><div class="ai-title">23 students likely to delay</div><div class="ai-desc">Based on payment history patterns, these students may miss the Jul 15 deadline.</div></div>
+        <div class="ai-card ok"><div class="ai-tag">📊 Exam Performance</div><div class="ai-title">CGPA trend improving</div><div class="ai-desc">Average CGPA up by 0.18 vs last semester. CSE and ECE showing strongest growth.</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-alert-triangle" style="color:var(--red);" aria-hidden="true"></i>Attendance Risk — Students Needing Intervention</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Student</th><th>Roll No</th><th>Dept</th><th>Current %</th><th>Predicted %</th><th>Risk</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Sanjay Kumar</td><td>CS21B004</td><td>CSE</td><td>62.5%</td><td>58.2%</td><td><span class="pill pill-red">High Risk</span></td><td><button class="btn btn-outline" style="font-size:11px;height:28px;padding:0 10px;">Send Alert</button></td></tr>
+            <tr><td class="td-name">Deepak Singh</td><td>ME21C008</td><td>Mech</td><td>65.0%</td><td>62.1%</td><td><span class="pill pill-red">High Risk</span></td><td><button class="btn btn-outline" style="font-size:11px;height:28px;padding:0 10px;">Send Alert</button></td></tr>
+            <tr><td class="td-name">Rahul Nair</td><td>BCA22A015</td><td>BCA</td><td>68.3%</td><td>65.8%</td><td><span class="pill pill-amber">Medium</span></td><td><button class="btn btn-outline" style="font-size:11px;height:28px;padding:0 10px;">Send Alert</button></td></tr>
+            <tr><td class="td-name">Kavya Raj</td><td>ECE22B010</td><td>ECE</td><td>70.1%</td><td>68.4%</td><td><span class="pill pill-amber">Medium</span></td><td><button class="btn btn-outline" style="font-size:11px;height:28px;padding:0 10px;">Send Alert</button></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-coins" style="color:var(--amber);" aria-hidden="true"></i>Fee Defaulter Prediction</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Student</th><th>Pending</th><th>Risk Score</th></tr></thead>
+            <tbody>
+              <tr><td class="td-name">Deepak Singh</td><td>₹18,500</td><td><span class="pill pill-red">92%</span></td></tr>
+              <tr><td class="td-name">Mohan Verma</td><td>₹37,000</td><td><span class="pill pill-red">88%</span></td></tr>
+              <tr><td class="td-name">Tanya Sharma</td><td>₹18,500</td><td><span class="pill pill-amber">74%</span></td></tr>
+              <tr><td class="td-name">Arun Pillai</td><td>₹22,000</td><td><span class="pill pill-amber">68%</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-trending-up" style="color:var(--green);" aria-hidden="true"></i>Exam Performance Analytics</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Dept</th><th>Avg CGPA</th><th>Trend</th></tr></thead>
+            <tbody>
+              <tr><td>CSE</td><td>7.84</td><td class="up">↑ +0.22</td></tr>
+              <tr><td>ECE</td><td>7.61</td><td class="up">↑ +0.18</td></tr>
+              <tr><td>Mechanical</td><td>7.12</td><td class="up">↑ +0.09</td></tr>
+              <tr><td>Civil</td><td>6.98</td><td class="down">↓ -0.04</td></tr>
+              <tr><td>MBA</td><td>7.45</td><td class="up">↑ +0.31</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ADMISSIONS ===== -->
+    <div id="sec-admissions" class="sec">
+      <div class="tab-row">
+        <div class="tab active" onclick="switchTab(this,'adm-list')">Applications</div>
+        <div class="tab" onclick="switchTab(this,'adm-new')">New Application</div>
+        <div class="tab" onclick="switchTab(this,'adm-stats')">Statistics</div>
+      </div>
+      <div id="adm-list" class="tab-panel active">
+        <div class="search-row"><input class="search-input" placeholder="Search by name, ID, or course..." /><button class="btn btn-blue"><i class="ti ti-filter" aria-hidden="true"></i> Filter</button></div>
+        <div class="card">
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>App ID</th><th>Name</th><th>Course</th><th>Category</th><th>Score</th><th>Applied On</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">#A2251</td><td class="td-name">Priya Menon</td><td>B.Tech CSE</td><td>General</td><td>98.2%ile</td><td>12 Jun</td><td><span class="pill pill-green">Confirmed</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+              <tr><td class="td-muted">#A2252</td><td class="td-name">Arjun Patel</td><td>MBA</td><td>OBC</td><td>CAT 87.4</td><td>10 Jun</td><td><span class="pill pill-green">Confirmed</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+              <tr><td class="td-muted">#A2253</td><td class="td-name">Sneha Iyer</td><td>B.Tech ECE</td><td>SC</td><td>95.6%ile</td><td>09 Jun</td><td><span class="pill pill-amber">Docs Pending</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+              <tr><td class="td-muted">#A2254</td><td class="td-name">Rahul Nair</td><td>BCA</td><td>General</td><td>82.1%ile</td><td>08 Jun</td><td><span class="pill pill-blue">Under Review</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+              <tr><td class="td-muted">#A2255</td><td class="td-name">Divya Singh</td><td>B.Tech Civil</td><td>ST</td><td>90.3%ile</td><td>07 Jun</td><td><span class="pill pill-gray">Waitlisted</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+              <tr><td class="td-muted">#A2256</td><td class="td-name">Karan Mehta</td><td>M.Tech</td><td>General</td><td>GATE 62.5</td><td>06 Jun</td><td><span class="pill pill-amber">Docs Pending</span></td><td><span style="color:var(--blue);cursor:pointer;font-size:12px;font-weight:600;">View</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div id="adm-new" class="tab-panel">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-forms" aria-hidden="true"></i>New Student Application</div>
+          <div class="form-grid">
+            <div class="fg"><label>Full Name</label><input type="text" placeholder="As per Class 12 certificate" /></div>
+            <div class="fg"><label>Date of Birth</label><input type="date" /></div>
+            <div class="fg"><label>Gender</label><select><option>Male</option><option>Female</option><option>Other</option></select></div>
+            <div class="fg"><label>Mobile Number</label><input type="tel" placeholder="10-digit mobile" /></div>
+            <div class="fg"><label>Email Address</label><input type="email" placeholder="student@example.com" /></div>
+            <div class="fg"><label>Aadhaar Number</label><input type="text" placeholder="XXXX XXXX XXXX" /></div>
+            <div class="fg"><label>Course Applied</label><select><option>B.Tech</option><option>M.Tech</option><option>MBA</option><option>BCA</option><option>MCA</option></select></div>
+            <div class="fg"><label>Department</label><select><option>Computer Science</option><option>Electronics & Communication</option><option>Mechanical</option><option>Civil</option><option>Management</option></select></div>
+            <div class="fg"><label>Reservation Category</label><select><option>General</option><option>OBC-NCL</option><option>SC</option><option>ST</option><option>EWS</option><option>PwD</option></select></div>
+            <div class="fg"><label>Entrance Exam</label><select><option>JEE Main</option><option>TNEA</option><option>CAT</option><option>GATE</option><option>State CET</option></select></div>
+            <div class="fg"><label>Entrance Score / Rank</label><input type="text" placeholder="e.g. 94.5 percentile or Rank 1240" /></div>
+            <div class="fg"><label>Annual Family Income</label><select><option>Below ₹1 Lakh</option><option>₹1–2.5 Lakh</option><option>₹2.5–5 Lakh</option><option>Above ₹5 Lakh</option></select></div>
+          </div>
+          <div class="btn-row"><button class="btn btn-blue"><i class="ti ti-send" aria-hidden="true"></i> Submit Application</button><button class="btn btn-outline">Save Draft</button></div>
+        </div>
+      </div>
+      <div id="adm-stats" class="tab-panel">
+        <div class="kpi-grid">
+          <div class="kpi"><div class="kpi-lbl">Total Applications</div><div class="kpi-val">1,840</div></div>
+          <div class="kpi"><div class="kpi-lbl">Confirmed</div><div class="kpi-val">912</div><div class="kpi-delta up">49.6%</div></div>
+          <div class="kpi"><div class="kpi-lbl">Waitlisted</div><div class="kpi-val">328</div><div class="kpi-delta">17.8%</div></div>
+          <div class="kpi"><div class="kpi-lbl">Seats Remaining</div><div class="kpi-val">248</div><div class="kpi-delta down">Across all courses</div></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-chart-pie" aria-hidden="true"></i>Category-wise Breakdown</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Category</th><th>Seats Available</th><th>Filled</th><th>Pending</th><th>Fill Rate</th></tr></thead>
+            <tbody>
+              <tr><td>General</td><td>600</td><td>512</td><td>88</td><td><span class="pill pill-green">85.3%</span></td></tr>
+              <tr><td>OBC-NCL</td><td>270</td><td>240</td><td>30</td><td><span class="pill pill-green">88.9%</span></td></tr>
+              <tr><td>SC</td><td>150</td><td>98</td><td>52</td><td><span class="pill pill-amber">65.3%</span></td></tr>
+              <tr><td>ST</td><td>75</td><td>42</td><td>33</td><td><span class="pill pill-amber">56.0%</span></td></tr>
+              <tr><td>EWS</td><td>60</td><td>20</td><td>40</td><td><span class="pill pill-red">33.3%</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ATTENDANCE ===== -->
+    <div id="sec-attendance" class="sec">
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-calendar-check" aria-hidden="true"></i>Monthly View — June 2025 <span class="card-sub">CS-3B</span></div>
+          <div style="display:flex;gap:14px;margin-bottom:10px;">
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--green-lt);border-radius:3px;display:inline-block;"></span>Present</span>
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--red-lt);border-radius:3px;display:inline-block;"></span>Absent</span>
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:#eef0f4;border-radius:3px;display:inline-block;"></span>Holiday</span>
+          </div>
+          <div class="att-cal">
+            <div class="att-day-hd">M</div><div class="att-day-hd">T</div><div class="att-day-hd">W</div><div class="att-day-hd">T</div><div class="att-day-hd">F</div><div class="att-day-hd">S</div><div class="att-day-hd">S</div>
+            <div class="att-cell att-X"></div><div class="att-cell att-X"></div><div class="att-cell att-X"></div><div class="att-cell att-X"></div><div class="att-cell att-X"></div><div class="att-cell att-H">H</div><div class="att-cell att-H">H</div>
+            <div class="att-cell att-P">2</div><div class="att-cell att-P">3</div><div class="att-cell att-P">4</div><div class="att-cell att-P">5</div><div class="att-cell att-P">6</div><div class="att-cell att-H">H</div><div class="att-cell att-H">H</div>
+            <div class="att-cell att-P">9</div><div class="att-cell att-P">10</div><div class="att-cell att-A">11</div><div class="att-cell att-P">12</div><div class="att-cell att-P">13</div><div class="att-cell att-H">H</div><div class="att-cell att-H">H</div>
+            <div class="att-cell att-P">16</div><div class="att-cell att-P">17</div><div class="att-cell att-P">18</div><div class="att-cell att-P">19</div><div class="att-cell att-A">20</div><div class="att-cell att-H">H</div><div class="att-cell att-H">H</div>
+            <div class="att-cell att-X">23</div><div class="att-cell att-X">24</div><div class="att-cell att-X">25</div><div class="att-cell att-X">26</div><div class="att-cell att-X">27</div><div class="att-cell att-H">H</div><div class="att-cell att-H">H</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-chart-bar" aria-hidden="true"></i>Dept-wise Attendance %</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Department</th><th>This Month</th><th>Overall</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>CSE</td><td>84%</td><td>87%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>ECE</td><td>81%</td><td>83%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>Mechanical</td><td>76%</td><td>79%</td><td><span class="pill pill-amber">Low</span></td></tr>
+              <tr><td>Civil</td><td>78%</td><td>80%</td><td><span class="pill pill-amber">Low</span></td></tr>
+              <tr><td>MBA</td><td>88%</td><td>89%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>BCA</td><td>71%</td><td>74%</td><td><span class="pill pill-red">At Risk</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-users" aria-hidden="true"></i>Student Attendance Summary — CS-3B</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Student</th><th>Roll No</th><th>Present</th><th>Absent</th><th>%</th><th>Progress</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Ananya Krishnan</td><td>CS21B001</td><td>14</td><td>2</td><td>87.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:87%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+            <tr><td class="td-name">Vikram Rao</td><td>CS21B002</td><td>12</td><td>4</td><td>75.0%</td><td><div class="prog-bar"><div class="prog-fill" style="width:75%;background:var(--amber);"></div></div></td><td><span class="pill pill-amber">Low</span></td></tr>
+            <tr><td class="td-name">Pooja Desai</td><td>CS21B003</td><td>15</td><td>1</td><td>93.7%</td><td><div class="prog-bar"><div class="prog-fill" style="width:94%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+            <tr><td class="td-name">Sanjay Kumar</td><td>CS21B004</td><td>10</td><td>6</td><td>62.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:62%;background:var(--red);"></div></div></td><td><span class="pill pill-red">At Risk</span></td></tr>
+            <tr><td class="td-name">Meera Pillai</td><td>CS21B005</td><td>14</td><td>2</td><td>87.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:87%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== EXAMINATIONS ===== -->
+    <div id="sec-exams" class="sec">
+      <div class="tab-row">
+        <div class="tab active" onclick="switchTab(this,'ex-schedule')">Schedule</div>
+        <div class="tab" onclick="switchTab(this,'ex-results')">Results</div>
+        <div class="tab" onclick="switchTab(this,'ex-marks')">Mark Entry</div>
+      </div>
+      <div id="ex-schedule" class="tab-panel active">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-clipboard-list" aria-hidden="true"></i>End Semester Examination — July 2025</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Date</th><th>Time</th><th>Exam</th><th>Subject</th><th>Hall</th><th>Invigilator</th><th>Students</th></tr></thead>
+            <tbody>
+              <tr><td>25 Jun</td><td>10:00–1:00 PM</td><td>B.Tech CS 3rd Sem</td><td>Data Structures</td><td>Hall A</td><td>Dr. Lakshmi Rao</td><td>120</td></tr>
+              <tr><td>27 Jun</td><td>10:00–1:00 PM</td><td>B.Tech CS 3rd Sem</td><td>DBMS</td><td>Hall B</td><td>Prof. Anand Kumar</td><td>120</td></tr>
+              <tr><td>26 Jun</td><td>2:00–5:00 PM</td><td>B.Tech ECE 3rd Sem</td><td>Signals & Systems</td><td>Hall C</td><td>Dr. Meena Pillai</td><td>90</td></tr>
+              <tr><td>28 Jun</td><td>10:00–1:00 PM</td><td>MBA 1st Sem</td><td>Marketing Mgmt</td><td>Hall D</td><td>Dr. Pradeep Singh</td><td>80</td></tr>
+              <tr><td>30 Jun</td><td>10:00–1:00 PM</td><td>B.Tech Mech 3rd Sem</td><td>Thermodynamics</td><td>Hall E</td><td>Mr. Rajesh Nair</td><td>70</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div id="ex-results" class="tab-panel">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-award" aria-hidden="true"></i>Result Card — Ananya Krishnan (CS21B001) — 3rd Semester</div>
+          <div class="result-grid">
+            <div class="result-box"><div class="res-sub">Data Structures</div><div class="res-marks">87</div><div class="res-grade"><span class="pill pill-green">A+</span></div></div>
+            <div class="result-box"><div class="res-sub">DBMS</div><div class="res-marks">79</div><div class="res-grade"><span class="pill pill-green">A</span></div></div>
+            <div class="result-box"><div class="res-sub">OS</div><div class="res-marks">91</div><div class="res-grade"><span class="pill pill-green">A+</span></div></div>
+            <div class="result-box"><div class="res-sub">CN</div><div class="res-marks">68</div><div class="res-grade"><span class="pill pill-blue">B+</span></div></div>
+            <div class="result-box"><div class="res-sub">Maths III</div><div class="res-marks">55</div><div class="res-grade"><span class="pill pill-amber">B</span></div></div>
+          </div>
+          <div style="margin-top:14px;font-size:13px;color:var(--text2);display:flex;gap:20px;padding-top:14px;border-top:1px solid var(--border);">
+            <span>SGPA: <strong style="color:var(--text);">8.2</strong></span>
+            <span>CGPA: <strong style="color:var(--text);">8.05</strong></span>
+            <span>Rank in class: <strong style="color:var(--text);">3 / 120</strong></span>
+            <span>Result: <span class="pill pill-green">Pass</span></span>
+          </div>
+        </div>
+      </div>
+      <div id="ex-marks" class="tab-panel">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-pencil" aria-hidden="true"></i>Internal Mark Entry — CS-3B / Data Structures</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Roll No</th><th>Name</th><th>IA 1 (25)</th><th>IA 2 (25)</th><th>Assignment (10)</th><th>Total (60)</th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">CS21B001</td><td class="td-name">Ananya Krishnan</td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="22" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="21" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="9" max="10" min="0"/></td><td style="font-weight:600;">52</td></tr>
+              <tr><td class="td-muted">CS21B002</td><td class="td-name">Vikram Rao</td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="18" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="17" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="7" max="10" min="0"/></td><td style="font-weight:600;">42</td></tr>
+              <tr><td class="td-muted">CS21B003</td><td class="td-name">Pooja Desai</td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="24" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="23" max="25" min="0"/></td><td><input type="number" style="width:60px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;font-size:12px;" value="10" max="10" min="0"/></td><td style="font-weight:600;">57</td></tr>
+            </tbody>
+          </table></div>
+          <div class="btn-row"><button class="btn btn-blue">Save Marks</button><button class="btn btn-outline">Export CSV</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TIMETABLE ===== -->
+    <div id="sec-timetable" class="sec">
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-calendar-time" aria-hidden="true"></i>Weekly Timetable — CS-3B (23–27 Jun 2025)</div>
+        <div class="tbl-wrap"><table class="tt-table">
+          <thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead>
+          <tbody>
+            <tr><td class="td-muted" style="white-space:nowrap;">9–10 AM</td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell">DBMS</div><div class="tt-sub">Dr. Lakshmi · A102</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td></tr>
+            <tr><td class="td-muted">10–11 AM</td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell" style="color:var(--teal);">DS Lab</div><div class="tt-sub">Lab A · 2 hrs</div></td><td><div class="tt-cell">DBMS</div><div class="tt-sub">Dr. Lakshmi · A102</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td></tr>
+            <tr><td class="td-muted">11–12 PM</td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td><td style="color:var(--teal);font-size:12px;">Lab contd.</td><td><div class="tt-cell" style="color:var(--purple);">Seminar</div><div class="tt-sub">Seminar Hall</div></td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell">Elective</div><div class="tt-sub">Choose slot</div></td></tr>
+            <tr><td class="td-muted" colspan="6" style="background:#f8f9fc;text-align:center;font-size:11px;color:var(--text3);padding:6px;">LUNCH BREAK — 12:00 to 1:00 PM</td></tr>
+            <tr><td class="td-muted">1–2 PM</td><td><div class="tt-cell" style="color:var(--teal);">DBMS Lab</div><div class="tt-sub">Lab B · 2 hrs</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell" style="color:var(--teal);">CN Lab</div><div class="tt-sub">Lab C · 2 hrs</div></td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== FEES ===== -->
+    <div id="sec-fees" class="sec">
+      <div class="fee-trio">
+        <div class="fee-card total"><div class="fee-lbl">Total Fees Due (2025–26)</div><div class="fee-val">₹8.4 Cr</div></div>
+        <div class="fee-card paid"><div class="fee-lbl">Collected</div><div class="fee-val">₹5.9 Cr</div><div class="prog-bar"><div class="prog-fill" style="width:70%;background:var(--green);"></div></div><div style="font-size:11px;color:var(--green);margin-top:4px;">70% collected</div></div>
+        <div class="fee-card due"><div class="fee-lbl">Outstanding</div><div class="fee-val">₹2.5 Cr</div><div style="font-size:11px;color:var(--amber);margin-top:8px;">Due by Jul 15, 2025</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-receipt-rupee" aria-hidden="true"></i>Recent Transactions</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Receipt</th><th>Student</th><th>Amount</th><th>Mode</th><th>Date</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">#RC4821</td><td class="td-name">Ravi Sharma</td><td>₹18,500</td><td>UPI</td><td>19 Jun</td><td><span class="pill pill-green">Paid</span></td></tr>
+              <tr><td class="td-muted">#RC4820</td><td class="td-name">Sunita Verma</td><td>₹45,000</td><td>NEFT</td><td>18 Jun</td><td><span class="pill pill-green">Paid</span></td></tr>
+              <tr><td class="td-muted">#RC4819</td><td class="td-name">Anil Kumar</td><td>₹22,000</td><td>DD</td><td>17 Jun</td><td><span class="pill pill-amber">Partial</span></td></tr>
+              <tr><td class="td-muted">#RC4818</td><td class="td-name">Kavya Nair</td><td>₹18,500</td><td>UPI</td><td>16 Jun</td><td><span class="pill pill-green">Paid</span></td></tr>
+              <tr><td class="td-muted">—</td><td class="td-name">Deepak Singh</td><td>₹18,500</td><td>—</td><td>—</td><td><span class="pill pill-red">Overdue</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-list-check" aria-hidden="true"></i>Fee Structure 2025–26</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Course</th><th>Tuition</th><th>Hostel</th><th>Total</th></tr></thead>
+            <tbody>
+              <tr><td>B.Tech</td><td>₹1,05,000</td><td>₹48,000</td><td style="font-weight:600;">₹1,53,000</td></tr>
+              <tr><td>M.Tech</td><td>₹85,000</td><td>₹48,000</td><td style="font-weight:600;">₹1,33,000</td></tr>
+              <tr><td>MBA</td><td>₹1,20,000</td><td>₹48,000</td><td style="font-weight:600;">₹1,68,000</td></tr>
+              <tr><td>BCA</td><td>₹65,000</td><td>₹48,000</td><td style="font-weight:600;">₹1,13,000</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FACULTY ===== -->
+    <div id="sec-faculty" class="sec">
+      <div class="search-row"><input class="search-input" placeholder="Search faculty by name, dept, designation..." /><button class="btn btn-blue"><i class="ti ti-plus" aria-hidden="true"></i> Add Faculty</button></div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-chalkboard" aria-hidden="true"></i>Faculty Directory</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Name</th><th>Dept</th><th>Designation</th><th>Qualification</th><th>Exp</th><th>Specialisation</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Dr. Lakshmi Rao</td><td>CSE</td><td>Professor & HoD</td><td>Ph.D. (IIT-M)</td><td>18 yrs</td><td>Machine Learning</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td class="td-name">Prof. Anand Kumar</td><td>CSE</td><td>Assoc. Professor</td><td>M.Tech</td><td>11 yrs</td><td>Networks</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td class="td-name">Dr. Meena Pillai</td><td>ECE</td><td>Professor</td><td>Ph.D. (IISc)</td><td>14 yrs</td><td>VLSI Design</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td class="td-name">Mr. Rajesh Nair</td><td>Mech</td><td>Asst. Professor</td><td>M.E.</td><td>4 yrs</td><td>CAD/CAM</td><td><span class="pill pill-amber">On Leave</span></td></tr>
+            <tr><td class="td-name">Dr. Pradeep Singh</td><td>MBA</td><td>Professor</td><td>Ph.D. (XLRI)</td><td>21 yrs</td><td>Marketing</td><td><span class="pill pill-green">Active</span></td></tr>
+            <tr><td class="td-name">Ms. Kavitha R</td><td>CSE</td><td>Asst. Professor</td><td>M.Tech (NIT)</td><td>3 yrs</td><td>Deep Learning</td><td><span class="pill pill-green">Active</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-id-badge" aria-hidden="true"></i>HR — Payroll Summary (June 2025)</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Name</th><th>Designation</th><th>Gross Salary</th><th>PF Deduction</th><th>TDS</th><th>Net Pay</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Dr. Lakshmi Rao</td><td>Professor & HoD</td><td>₹1,40,000</td><td>₹16,800</td><td>₹8,400</td><td style="font-weight:600;">₹1,14,800</td><td><span class="pill pill-green">Processed</span></td></tr>
+            <tr><td class="td-name">Prof. Anand Kumar</td><td>Assoc. Professor</td><td>₹95,000</td><td>₹11,400</td><td>₹4,750</td><td style="font-weight:600;">₹78,850</td><td><span class="pill pill-green">Processed</span></td></tr>
+            <tr><td class="td-name">Dr. Meena Pillai</td><td>Professor</td><td>₹1,20,000</td><td>₹14,400</td><td>₹6,000</td><td style="font-weight:600;">₹99,600</td><td><span class="pill pill-green">Processed</span></td></tr>
+            <tr><td class="td-name">Mr. Rajesh Nair</td><td>Asst. Professor</td><td>₹65,000</td><td>₹7,800</td><td>₹0</td><td style="font-weight:600;">₹57,200</td><td><span class="pill pill-amber">On Hold</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== HOSTEL ===== -->
+    <div id="sec-hostel" class="sec">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-building" style="color:var(--blue);" aria-hidden="true"></i>Total Rooms</div><div class="kpi-val">480</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-user-check" style="color:var(--green);" aria-hidden="true"></i>Occupied</div><div class="kpi-val">412</div><div class="kpi-delta up">85.8%</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-door-exit" style="color:var(--amber);" aria-hidden="true"></i>Vacant</div><div class="kpi-val">52</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-tools" style="color:var(--red);" aria-hidden="true"></i>Maintenance</div><div class="kpi-val">16</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-layout-grid" aria-hidden="true"></i>Block A — Room Status (Ground Floor)</div>
+          <div style="display:flex;gap:12px;margin-bottom:10px;font-size:11px;">
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--blue-lt);border:1.5px solid #b5d0f0;border-radius:3px;display:inline-block;"></span>Occupied</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--green-lt);border:1.5px solid #b2dfc2;border-radius:3px;display:inline-block;"></span>Vacant</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--amber-lt);border:1.5px solid #f5d99a;border-radius:3px;display:inline-block;"></span>Maintenance</span>
+          </div>
+          <div class="room-grid">
+            <div class="room occ">A01</div><div class="room occ">A02</div><div class="room occ">A03</div><div class="room vac">A04</div><div class="room occ">A05</div><div class="room occ">A06</div><div class="room maint">A07</div><div class="room occ">A08</div>
+            <div class="room occ">A09</div><div class="room vac">A10</div><div class="room occ">A11</div><div class="room occ">A12</div><div class="room occ">A13</div><div class="room maint">A14</div><div class="room occ">A15</div><div class="room occ">A16</div>
+            <div class="room vac">A17</div><div class="room occ">A18</div><div class="room occ">A19</div><div class="room occ">A20</div><div class="room occ">A21</div><div class="room occ">A22</div><div class="room vac">A23</div><div class="room occ">A24</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-users" aria-hidden="true"></i>Room Allotments</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Room</th><th>Student</th><th>Roll No</th><th>Check-in</th><th>Fee Paid</th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">A01</td><td class="td-name">Ananya Krishnan</td><td>CS21B001</td><td>01 Jul 2024</td><td><span class="pill pill-green">Yes</span></td></tr>
+              <tr><td class="td-muted">A02</td><td class="td-name">Pooja Desai</td><td>CS21B003</td><td>01 Jul 2024</td><td><span class="pill pill-green">Yes</span></td></tr>
+              <tr><td class="td-muted">A05</td><td class="td-name">Meera Pillai</td><td>CS21B005</td><td>01 Jul 2024</td><td><span class="pill pill-amber">Partial</span></td></tr>
+              <tr><td class="td-muted">A09</td><td class="td-name">Kavya Raj</td><td>ECE22B010</td><td>05 Jul 2024</td><td><span class="pill pill-red">Unpaid</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-clipboard-text" aria-hidden="true"></i>Maintenance Requests</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Room</th><th>Issue</th><th>Raised By</th><th>Date</th><th>Priority</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-muted">A07</td><td>AC not working</td><td>Sanjay Kumar</td><td>17 Jun</td><td><span class="pill pill-red">High</span></td><td><span class="pill pill-amber">In Progress</span></td></tr>
+            <tr><td class="td-muted">A14</td><td>Plumbing leak</td><td>Arun Pillai</td><td>15 Jun</td><td><span class="pill pill-red">High</span></td><td><span class="pill pill-amber">In Progress</span></td></tr>
+            <tr><td class="td-muted">B03</td><td>Window latch broken</td><td>Rahul Nair</td><td>13 Jun</td><td><span class="pill pill-gray">Low</span></td><td><span class="pill pill-green">Resolved</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== TRANSPORT ===== -->
+    <div id="sec-transport" class="sec">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-bus" style="color:var(--blue);" aria-hidden="true"></i>Total Buses</div><div class="kpi-val">24</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-route" style="color:var(--teal);" aria-hidden="true"></i>Active Routes</div><div class="kpi-val">18</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-users" style="color:var(--green);" aria-hidden="true"></i>Students Using Bus</div><div class="kpi-val">1,842</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-alert-circle" style="color:var(--amber);" aria-hidden="true"></i>Delays Today</div><div class="kpi-val">2</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-route" aria-hidden="true"></i>Route Status — Today</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Route</th><th>Area</th><th>Bus No</th><th>Driver</th><th>Students</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">R-01</td><td class="td-name">Tambaram</td><td>TN 09 AB 1234</td><td>Rajan M</td><td>68</td><td><span class="pill pill-amber">Delayed 20 min</span></td></tr>
+              <tr><td class="td-muted">R-02</td><td class="td-name">Velachery</td><td>TN 09 CD 5678</td><td>Senthil K</td><td>82</td><td><span class="pill pill-green">On Time</span></td></tr>
+              <tr><td class="td-muted">R-03</td><td class="td-name">Porur</td><td>TN 09 EF 9012</td><td>Murugan P</td><td>55</td><td><span class="pill pill-green">On Time</span></td></tr>
+              <tr><td class="td-muted">R-04</td><td class="td-name">Avadi</td><td>TN 09 GH 3456</td><td>Arjun S</td><td>73</td><td><span class="pill pill-amber">Delayed 10 min</span></td></tr>
+              <tr><td class="td-muted">R-05</td><td class="td-name">Chromepet</td><td>TN 09 IJ 7890</td><td>Prakash N</td><td>60</td><td><span class="pill pill-green">On Time</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-calendar-time" aria-hidden="true"></i>Bus Pass Renewals Due</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Student</th><th>Route</th><th>Expiry</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="td-name">Vikram Rao</td><td>R-01</td><td>20 Jun 2025</td><td><span class="pill pill-red">Expired</span></td></tr>
+              <tr><td class="td-name">Sneha Iyer</td><td>R-03</td><td>22 Jun 2025</td><td><span class="pill pill-amber">Expiring Soon</span></td></tr>
+              <tr><td class="td-name">Rohit Kumar</td><td>R-02</td><td>25 Jun 2025</td><td><span class="pill pill-amber">Expiring Soon</span></td></tr>
+              <tr><td class="td-name">Priya Nair</td><td>R-05</td><td>30 Jun 2025</td><td><span class="pill pill-blue">Active</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== LIBRARY ===== -->
+    <div id="sec-library" class="sec">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-books" style="color:var(--purple);" aria-hidden="true"></i>Total Books</div><div class="kpi-val">18,420</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-book-upload" style="color:var(--green);" aria-hidden="true"></i>Issued Today</div><div class="kpi-val">47</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-book-download" style="color:var(--blue);" aria-hidden="true"></i>Returned Today</div><div class="kpi-val">31</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-alert-circle" style="color:var(--red);" aria-hidden="true"></i>Overdue</div><div class="kpi-val">8</div></div>
+      </div>
+      <div class="search-row"><input class="search-input" placeholder="Search by title, author, ISBN, or accession number..." /><button class="btn btn-blue"><i class="ti ti-plus" aria-hidden="true"></i> Issue Book</button></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-book-upload" aria-hidden="true"></i>Currently Issued</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Acc No</th><th>Title</th><th>Issued To</th><th>Due</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="td-muted">ACC-1042</td><td>CLRS Algorithms</td><td>Ananya (CS)</td><td>24 Jun</td><td><span class="pill pill-amber">Due Soon</span></td></tr>
+              <tr><td class="td-muted">ACC-2218</td><td>Database System Concepts</td><td>Vikram (CS)</td><td>19 Jun</td><td><span class="pill pill-red">Overdue</span></td></tr>
+              <tr><td class="td-muted">ACC-0891</td><td>OS Concepts</td><td>Pooja (CS)</td><td>26 Jun</td><td><span class="pill pill-green">On Time</span></td></tr>
+              <tr><td class="td-muted">ACC-3301</td><td>Marketing Mgmt</td><td>Arjun (MBA)</td><td>22 Jun</td><td><span class="pill pill-red">Overdue</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-chart-bar" aria-hidden="true"></i>Most Borrowed This Month</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Title</th><th>Author</th><th>Times</th></tr></thead>
+            <tbody>
+              <tr><td>CLRS Algorithms</td><td>Cormen et al.</td><td style="font-weight:600;">34</td></tr>
+              <tr><td>The Art of Problem Solving</td><td>Rusczyk</td><td style="font-weight:600;">28</td></tr>
+              <tr><td>Clean Code</td><td>Robert C. Martin</td><td style="font-weight:600;">22</td></tr>
+              <tr><td>DB System Concepts</td><td>Silberschatz</td><td style="font-weight:600;">19</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PLACEMENT ===== -->
+    <div id="sec-placement" class="sec">
+      <div class="kpi-grid">
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-briefcase" style="color:var(--blue);" aria-hidden="true"></i>Offers This Year</div><div class="kpi-val">842</div><div class="kpi-delta up">↑ 14% vs last year</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-building-bank" style="color:var(--purple);" aria-hidden="true"></i>Companies Visited</div><div class="kpi-val">68</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-trending-up" style="color:var(--green);" aria-hidden="true"></i>Avg Package</div><div class="kpi-val">₹7.2 LPA</div><div class="kpi-delta up">↑ ₹0.8 LPA</div></div>
+        <div class="kpi"><div class="kpi-lbl"><i class="ti ti-crown" style="color:var(--amber);" aria-hidden="true"></i>Highest Package</div><div class="kpi-val">₹42 LPA</div><div class="kpi-delta">Google — CSE</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-filter" aria-hidden="true"></i>Placement Funnel — 2025 Batch</div>
+          <div class="funnel">
+            <div class="funnel-row"><div class="funnel-lbl">Eligible Students</div><div class="funnel-bar-wrap"><div class="funnel-bar-inner" style="width:100%;background:var(--blue);">1,240</div></div><div class="funnel-count">1,240</div></div>
+            <div class="funnel-row"><div class="funnel-lbl">Registered</div><div class="funnel-bar-wrap"><div class="funnel-bar-inner" style="width:88%;background:var(--teal);">1,092</div></div><div class="funnel-count">1,092</div></div>
+            <div class="funnel-row"><div class="funnel-lbl">Appeared in Drive</div><div class="funnel-bar-wrap"><div class="funnel-bar-inner" style="width:72%;background:var(--purple);">892</div></div><div class="funnel-count">892</div></div>
+            <div class="funnel-row"><div class="funnel-lbl">Cleared Interview</div><div class="funnel-bar-wrap"><div class="funnel-bar-inner" style="width:52%;background:var(--amber);">645</div></div><div class="funnel-count">645</div></div>
+            <div class="funnel-row"><div class="funnel-lbl">Offers Received</div><div class="funnel-bar-wrap"><div class="funnel-bar-inner" style="width:68%;background:var(--green);">842</div></div><div class="funnel-count">842</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-calendar-event" aria-hidden="true"></i>Upcoming Drives</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Company</th><th>Date</th><th>Role</th><th>Package</th><th>Eligible</th></tr></thead>
+            <tbody>
+              <tr><td class="td-name">Infosys</td><td>25 Jun</td><td>Systems Engineer</td><td>₹3.6 LPA</td><td><span class="pill pill-blue">All Depts</span></td></tr>
+              <tr><td class="td-name">TCS</td><td>28 Jun</td><td>Developer</td><td>₹3.36 LPA</td><td><span class="pill pill-blue">All Depts</span></td></tr>
+              <tr><td class="td-name">Wipro</td><td>02 Jul</td><td>Project Engineer</td><td>₹3.5 LPA</td><td><span class="pill pill-blue">B.Tech</span></td></tr>
+              <tr><td class="td-name">Amazon</td><td>10 Jul</td><td>SDE-1</td><td>₹24 LPA</td><td><span class="pill pill-purple">CSE / ECE</span></td></tr>
+              <tr><td class="td-name">Zoho</td><td>15 Jul</td><td>Jr. Developer</td><td>₹5 LPA</td><td><span class="pill pill-purple">CSE / BCA</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ALUMNI ===== -->
+    <div id="sec-alumni" class="sec">
+      <div class="stat-row">
+        <div class="stat-item"><div class="stat-val">12,480</div><div class="stat-lbl">Total Alumni</div></div>
+        <div class="stat-item"><div class="stat-val">3,240</div><div class="stat-lbl">Active Members</div></div>
+        <div class="stat-item"><div class="stat-val">142</div><div class="stat-lbl">Mentors</div></div>
+        <div class="stat-item"><div class="stat-val">₹84 L</div><div class="stat-lbl">Donations (2024–25)</div></div>
+        <div class="stat-item"><div class="stat-val">28</div><div class="stat-lbl">Countries</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-users-group" aria-hidden="true"></i>Notable Alumni</div>
+          <div class="alumni-grid">
+            <div class="alumni-card"><div class="alumni-avatar" style="background:var(--blue-lt);color:var(--blue);">RS</div><div class="alumni-name">Ramesh S.</div><div class="alumni-role">VP Eng, Google India</div><div style="margin-top:6px;"><span class="pill pill-blue" style="font-size:10px;">CSE '08</span></div></div>
+            <div class="alumni-card"><div class="alumni-avatar" style="background:var(--purple-lt);color:var(--purple);">PK</div><div class="alumni-name">Priya K.</div><div class="alumni-role">CTO, Freshworks</div><div style="margin-top:6px;"><span class="pill pill-purple" style="font-size:10px;">CSE '11</span></div></div>
+            <div class="alumni-card"><div class="alumni-avatar" style="background:var(--teal-lt);color:var(--teal);">AR</div><div class="alumni-name">Anand R.</div><div class="alumni-role">Founder, EdTechCo</div><div style="margin-top:6px;"><span class="pill pill-teal" style="font-size:10px;">ECE '09</span></div></div>
+            <div class="alumni-card"><div class="alumni-avatar" style="background:var(--amber-lt);color:var(--amber);">SM</div><div class="alumni-name">Sunita M.</div><div class="alumni-role">IAS Officer, TN</div><div style="margin-top:6px;"><span class="pill pill-amber" style="font-size:10px;">MBA '13</span></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-calendar-event" aria-hidden="true"></i>Alumni Events</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Event</th><th>Date</th><th>Mode</th><th>Registrations</th></tr></thead>
+            <tbody>
+              <tr><td class="td-name">Annual Alumni Meet 2025</td><td>12 Jul 2025</td><td><span class="pill pill-blue">In-Person</span></td><td>380</td></tr>
+              <tr><td class="td-name">Mentorship Webinar — CSE</td><td>28 Jun 2025</td><td><span class="pill pill-teal">Online</span></td><td>142</td></tr>
+              <tr><td class="td-name">Startup Panel Discussion</td><td>05 Jul 2025</td><td><span class="pill pill-purple">Hybrid</span></td><td>220</td></tr>
+              <tr><td class="td-name">Scholarship Fund Drive</td><td>Ongoing</td><td><span class="pill pill-green">Online</span></td><td>—</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-map-pin" aria-hidden="true"></i>Alumni Distribution by Industry</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Industry</th><th>Count</th><th>% Share</th><th>Top Company</th></tr></thead>
+          <tbody>
+            <tr><td>IT & Software</td><td>5,840</td><td>46.8%</td><td>TCS, Infosys, Wipro</td></tr>
+            <tr><td>Core Engineering</td><td>2,120</td><td>17.0%</td><td>L&T, BHEL, ISRO</td></tr>
+            <tr><td>Banking & Finance</td><td>1,480</td><td>11.9%</td><td>SBI, HDFC, Goldman Sachs</td></tr>
+            <tr><td>Entrepreneurship</td><td>840</td><td>6.7%</td><td>Self-founded startups</td></tr>
+            <tr><td>Government / PSU</td><td>620</td><td>5.0%</td><td>IAS, IPS, TNPSC</td></tr>
+            <tr><td>Higher Education</td><td>410</td><td>3.3%</td><td>IITs, NITs, US Universities</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ===== REPORTS ===== -->
+    <div id="sec-reports" class="sec">
+      <div class="three-col">
+        <div class="card" style="cursor:pointer;" onclick="go('dashboard',document.querySelector('.nav-item'))"><div class="card-hd"><i class="ti ti-users" aria-hidden="true"></i>Student Report</div><div style="font-size:12px;color:var(--text2);">Enrollment, demographics, dropout rates, category-wise analysis</div><div style="margin-top:10px;"><span class="pill pill-blue">Generate PDF</span></div></div>
+        <div class="card" style="cursor:pointer;"><div class="card-hd"><i class="ti ti-report-money" aria-hidden="true"></i>Finance Report</div><div style="font-size:12px;color:var(--text2);">Fee collection, outstanding dues, salary disbursements</div><div style="margin-top:10px;"><span class="pill pill-green">Generate PDF</span></div></div>
+        <div class="card" style="cursor:pointer;"><div class="card-hd"><i class="ti ti-calendar-stats" aria-hidden="true"></i>Attendance Report</div><div style="font-size:12px;color:var(--text2);">Class-wise, dept-wise, student-wise monthly attendance</div><div style="margin-top:10px;"><span class="pill pill-amber">Generate PDF</span></div></div>
+        <div class="card" style="cursor:pointer;"><div class="card-hd"><i class="ti ti-award" aria-hidden="true"></i>Exam & Results</div><div style="font-size:12px;color:var(--text2);">Semester results, CGPA trends, topper lists, arrears</div><div style="margin-top:10px;"><span class="pill pill-purple">Generate PDF</span></div></div>
+        <div class="card" style="cursor:pointer;"><div class="card-hd"><i class="ti ti-briefcase" aria-hidden="true"></i>Placement Report</div><div style="font-size:12px;color:var(--text2);">Annual placement stats, company-wise, branch-wise breakdown</div><div style="margin-top:10px;"><span class="pill pill-teal">Generate PDF</span></div></div>
+        <div class="card" style="cursor:pointer;"><div class="card-hd"><i class="ti ti-building" aria-hidden="true"></i>NAAC / AICTE Report</div><div style="font-size:12px;color:var(--text2);">Compliance reports formatted as per NAAC / AICTE templates</div><div style="margin-top:10px;"><span class="pill pill-red">Generate PDF</span></div></div>
+      </div>
+    </div>
+
+    <!-- ===== SETTINGS ===== -->
+    <div id="sec-settings" class="sec">
+      <div class="two-col">
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-building-bank" aria-hidden="true"></i>College Information</div>
+          <div class="form-grid" style="grid-template-columns:1fr;">
+            <div class="fg"><label>College Name</label><input type="text" value="Sri Vidya College of Engineering"/></div>
+            <div class="fg"><label>University Affiliation</label><input type="text" value="Anna University, Chennai"/></div>
+            <div class="fg"><label>NAAC Grade</label><select><option>A+</option><option>A</option><option>B++</option></select></div>
+            <div class="fg"><label>Academic Year</label><select><option>2025–26</option><option>2024–25</option></select></div>
+          </div>
+          <div class="btn-row"><button class="btn btn-blue">Save Changes</button></div>
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-bell" aria-hidden="true"></i>Notification Settings</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><div><div style="font-size:13px;font-weight:500;">Attendance Alerts (SMS)</div><div style="font-size:12px;color:var(--text3);">Alert parents when below 75%</div></div><div style="width:40px;height:22px;background:var(--blue);border-radius:11px;position:relative;cursor:pointer;"><div style="width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;top:2px;right:2px;"></div></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><div><div style="font-size:13px;font-weight:500;">Fee Due Reminders</div><div style="font-size:12px;color:var(--text3);">Remind 7 days before due date</div></div><div style="width:40px;height:22px;background:var(--blue);border-radius:11px;position:relative;cursor:pointer;"><div style="width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;top:2px;right:2px;"></div></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><div><div style="font-size:13px;font-weight:500;">Result Publication</div><div style="font-size:12px;color:var(--text3);">Notify students on result upload</div></div><div style="width:40px;height:22px;background:var(--blue);border-radius:11px;position:relative;cursor:pointer;"><div style="width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;top:2px;right:2px;"></div></div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><div><div style="font-size:13px;font-weight:500;">Bus Delay Alerts</div><div style="font-size:12px;color:var(--text3);">Push notification on delays</div></div><div style="width:40px;height:22px;background:#dde1e8;border-radius:11px;position:relative;cursor:pointer;"><div style="width:18px;height:18px;background:#fff;border-radius:50%;position:absolute;top:2px;left:2px;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+

@@ -1,1 +1,26 @@
 <p>timetable works!</p>
+  <div id="topbar">
+    <div id="hamburger" (click)="toggleSidebar()" aria-label="Open menu">  <i class="ti ti-menu-2" aria-hidden="true"></i></div>
+    <!--div id="hamburger" onclick="toggleSidebar()" aria-label="Open menu"><i class="ti ti-menu-2" aria-hidden="true"></i></div-->
+    <div class="page-title" id="page-title">Timetable</div>
+    <div class="topbar-chip"><i class="ti ti-calendar" aria-hidden="true"></i> AY 2025–26 | Semester 1</div>
+    <div class="topbar-chip"><i class="ti ti-building-bank" aria-hidden="true"></i> AMC Engineering College</div>
+    <div class="notif-btn" title="Notifications"><i class="ti ti-bell" style="font-size:17px;color:var(--text2);" aria-hidden="true"></i><div class="notif-dot"></div></div>
+  </div>
+  
+<!-- ===== TIMETABLE ===== -->
+    <div id="sec-timetable" class="sec">
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-calendar-time" aria-hidden="true"></i>Weekly Timetable — CS-3B (23–27 Jun 2025)</div>
+        <div class="tbl-wrap"><table class="tt-table">
+          <thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead>
+          <tbody>
+            <tr><td class="td-muted" style="white-space:nowrap;">9–10 AM</td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell">DBMS</div><div class="tt-sub">Dr. Lakshmi · A102</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td></tr>
+            <tr><td class="td-muted">10–11 AM</td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell" style="color:var(--teal);">DS Lab</div><div class="tt-sub">Lab A · 2 hrs</div></td><td><div class="tt-cell">DBMS</div><div class="tt-sub">Dr. Lakshmi · A102</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td></tr>
+            <tr><td class="td-muted">11–12 PM</td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td><td style="color:var(--teal);font-size:12px;">Lab contd.</td><td><div class="tt-cell" style="color:var(--purple);">Seminar</div><div class="tt-sub">Seminar Hall</div></td><td><div class="tt-cell">Data Structures</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell">Elective</div><div class="tt-sub">Choose slot</div></td></tr>
+            <tr><td class="td-muted" colspan="6" style="background:#f8f9fc;text-align:center;font-size:11px;color:var(--text3);padding:6px;">LUNCH BREAK — 12:00 to 1:00 PM</td></tr>
+            <tr><td class="td-muted">1–2 PM</td><td><div class="tt-cell" style="color:var(--teal);">DBMS Lab</div><div class="tt-sub">Lab B · 2 hrs</div></td><td><div class="tt-cell">OS</div><div class="tt-sub">Dr. Lakshmi · A101</div></td><td><div class="tt-cell">CN</div><div class="tt-sub">Prof. Anand · A101</div></td><td><div class="tt-cell" style="color:var(--teal);">CN Lab</div><div class="tt-sub">Lab C · 2 hrs</div></td><td><div class="tt-cell">Maths III</div><div class="tt-sub">Prof. Anand · B201</div></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
