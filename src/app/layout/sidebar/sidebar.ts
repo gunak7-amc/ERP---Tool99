@@ -35,22 +35,12 @@ export class Sidebar {
 
   constructor(private router: Router) { }
   bnavIds = ['dashboard', 'admissions', 'fees', 'attendance'];
-  go1(section: string) {
-    this.activeSection = section;
-    this.router.navigate([section]);
-
-    const match = this.bnavIds.find(id =>
-      section.toLowerCase().includes(id) ||
-      section.toLowerCase().includes(this.titles[id].toLowerCase())
-    );
-
-    if (match) {
-      this.activeBottomNav = match;
-    }
-  }
+ 
 
     go(id: string) {
       this.activeSection = id;
+      this.activeBottomNav = id;
+      this.router.navigate([id]);
 
       const titleEl = document.getElementById('page-title');
       if (titleEl) {

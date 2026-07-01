@@ -1,3 +1,110 @@
-<p>attendance works!</p>
+
 
  
+  <div id="topbar">
+    <div id="hamburger" (click)="toggleSidebar()" aria-label="Open menu">  <i class="ti ti-menu-2" aria-hidden="true"></i></div>
+    <!--div id="hamburger" onclick="toggleSidebar()" aria-label="Open menu"><i class="ti ti-menu-2" aria-hidden="true"></i></div-->
+    <div class="page-title" id="page-title">Attendance</div>
+    <div class="topbar-chip"><i class="ti ti-calendar" aria-hidden="true"></i> AY 2025–26 | Semester 1</div>
+    <div class="topbar-chip"><i class="ti ti-building-bank" aria-hidden="true"></i> AMC Engineering College</div>
+    <div class="notif-btn" title="Notifications"><i class="ti ti-bell" style="font-size:17px;color:var(--text2);" aria-hidden="true"></i><div class="notif-dot"></div></div>
+  </div>
+ <!-- ===== ATTENDANCE ===== -->
+  <div id="content">
+  <div class="two-col">
+        <div class="card">
+          <div class="card-hd">
+
+    <button class="month-btn" (click)="previousMonth()">
+        ◀
+    </button>
+
+    <select [(ngModel)]="selectedMonth" (change)="monthChanged()">
+
+        <option *ngFor="let month of months; let i=index"
+                [value]="i">
+
+            {{month}}
+
+        </option>
+
+    </select>
+
+    <select [(ngModel)]="selectedYear"
+            (change)="monthChanged()">
+
+        <option *ngFor="let y of [2024,2025,2026,2027,2028,2029,2030]">
+
+            {{y}}
+
+        </option>
+
+    </select>
+
+    <button class="month-btn" (click)="nextMonth()">
+        ▶
+    </button>
+
+</div>
+          <div style="display:flex;gap:14px;margin-bottom:10px;">
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--green-lt);border-radius:3px;display:inline-block;"></span>Present</span>
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:var(--red-lt);border-radius:3px;display:inline-block;"></span>Absent</span>
+            <span style="font-size:11px;display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;background:#eef0f4;border-radius:3px;display:inline-block;"></span>Holiday</span>
+          </div>
+          <div class="att-cal">
+              <!-- Week Header -->
+            <div
+        class="att-day-hd"
+        *ngFor="let d of weekDays">
+
+        {{d}}
+
+    </div>
+
+     <div
+        *ngFor="let c of calendar"
+        class="att-cell"
+
+        [ngClass]="{
+            'att-P': c.status=='P',
+            'att-A': c.status=='A',
+            'att-H': c.status=='H',
+            'att-X': c.status=='X'
+        }">
+
+        {{c.day}}
+
+    </div>
+
+          </div>
+          
+        </div>
+        <div class="card">
+          <div class="card-hd"><i class="ti ti-chart-bar" aria-hidden="true"></i>Dept-wise Attendance %</div>
+          <div class="tbl-wrap"><table>
+            <thead><tr><th>Department</th><th>This Month</th><th>Overall</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>CSE</td><td>84%</td><td>87%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>ECE</td><td>81%</td><td>83%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>Mechanical</td><td>76%</td><td>79%</td><td><span class="pill pill-amber">Low</span></td></tr>
+              <tr><td>Civil</td><td>78%</td><td>80%</td><td><span class="pill pill-amber">Low</span></td></tr>
+              <tr><td>MBA</td><td>88%</td><td>89%</td><td><span class="pill pill-green">Good</span></td></tr>
+              <tr><td>BCA</td><td>71%</td><td>74%</td><td><span class="pill pill-red">At Risk</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-hd"><i class="ti ti-users" aria-hidden="true"></i>Student Attendance Summary — CS-3B</div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Student</th><th>Roll No</th><th>Present</th><th>Absent</th><th>%</th><th>Progress</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="td-name">Ananya Krishnan</td><td>CS21B001</td><td>14</td><td>2</td><td>87.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:87%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+            <tr><td class="td-name">Vikram Rao</td><td>CS21B002</td><td>12</td><td>4</td><td>75.0%</td><td><div class="prog-bar"><div class="prog-fill" style="width:75%;background:var(--amber);"></div></div></td><td><span class="pill pill-amber">Low</span></td></tr>
+            <tr><td class="td-name">Pooja Desai</td><td>CS21B003</td><td>15</td><td>1</td><td>93.7%</td><td><div class="prog-bar"><div class="prog-fill" style="width:94%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+            <tr><td class="td-name">Sanjay Kumar</td><td>CS21B004</td><td>10</td><td>6</td><td>62.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:62%;background:var(--red);"></div></div></td><td><span class="pill pill-red">At Risk</span></td></tr>
+            <tr><td class="td-name">Meera Pillai</td><td>CS21B005</td><td>14</td><td>2</td><td>87.5%</td><td><div class="prog-bar"><div class="prog-fill" style="width:87%;background:var(--green);"></div></div></td><td><span class="pill pill-green">Good</span></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+</div>

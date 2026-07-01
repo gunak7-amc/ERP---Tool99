@@ -1,38 +1,11 @@
-  <app-sidebar *ngIf="router.url !== '/login'"></app-sidebar>
+<app-sidebar *ngIf="router.url !== '/' && router.url !== '/login'"></app-sidebar>
 
-  <div id="main">
-    <router-outlet></router-outlet>
-  </div>
+<div id="main" [class.no-sidebar]="router.url === '/' || router.url === '/login'">
+  <router-outlet></router-outlet>
+</div>
 
 
 
-  <!-- BOTTOM NAV (mobile) -->
-  <div id="bottom-nav" role="navigation" aria-label="Quick navigation">
-    <div class="bnav-inner">
-      <!--div class="bnav-item active" id="bnav-dashboard" (click)="go1('dashboard',document.querySelector('.nav-item'));setBottomNav('dashboard')"><i class="ti ti-layout-dashboard" aria-hidden="true"></i><span>Home</span></div>
-      
-      <div class="bnav-item" id="bnav-admissions" (click)="go1('admissions',null);setBottomNav('admissions')"><i class="ti ti-file-plus" aria-hidden="true"></i><span>Admissions</span></div>
-      <div class="bnav-item" id="bnav-fees" (click)="go1('fees',null);setBottomNav('fees')"><i class="ti ti-receipt-rupee" aria-hidden="true"></i><span>Fees</span></div>
-      <div class="bnav-item" id="bnav-attendance" (click)="go1('attendance',null);setBottomNav('attendance')"><i class="ti ti-calendar-check" aria-hidden="true"></i><span>Attend.</span></div>
-      <div class="bnav-item" id="bnav-more" (click)="toggleSidebar()"><i class="ti ti-dots" aria-hidden="true"></i><span>More</span></div-->
-    <div class="bnav-item" [class.active]="activeSection === 'dashboard'" (click)="go1('dashboard')"> <i
-        class="ti ti-layout-dashboard"></i> <span>Home</span></div>
-    <div class="bnav-item" [class.active]="activeSection === 'admissions'" (click)="go1('admissions')">
-      <i class="ti ti-file-plus"></i><span>Admissions</span> </div>
-    
-    <div class="bnav-item" [class.active]="activeSection === 'fees'" (click)="go1('fees')">
-      <i class="ti ti-receipt-rupee"></i><span>Fees</span> </div>
-    
-    <div class="bnav-item" [class.active]="activeSection === 'attendance'" (click)="go1('attendance')">
-      <i class="ti ti-calendar-check"></i> <span>Attend.</span> </div>
-    
-    <div class="bnav-item" (click)="toggleSidebar()">
-      <i class="ti ti-dots"></i>
-      <span>More</span>
-    </div>
-    
-    </div>
-    </div>
 
 
 
