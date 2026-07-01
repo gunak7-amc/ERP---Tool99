@@ -1,0 +1,33 @@
+.month-btn{
+
+    border:none;
+    background:#2563eb;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+.month-btn:hover{
+
+    background:#0f4c81;
+
+}
+
+.card-hd{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+
+}
+
+.card-hd select{
+
+    padding:8px 10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+
+}

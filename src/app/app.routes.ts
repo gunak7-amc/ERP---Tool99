@@ -19,7 +19,7 @@ import { Login } from './modules/login/login/login';
 
 
 export const routes: Routes = [
-    { path: '', component: Dashboard },
+    { path: '', component: Login },
     { path: 'login', component: Login },
     { path: 'dashboard', component: Dashboard },
     { path: 'timetable', component: Timetable },
