@@ -1,20 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule, FormsModule ],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.html',
-  styleUrl: './login.css',
+  styleUrl: './login.css'
 })
 export class Login {
 
-email = '';
+  email = '';
   password = '';
   otp = '';
 
   otpSent = false;
+
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) {}
 
   login() {
 
@@ -23,24 +31,73 @@ email = '';
       return;
     }
 
-    // Call your API here to validate email/password
-    // and send OTP
+    const payload = {
+      email: this.email,
+      password: this.password
+    };
 
-    this.otpSent = true;
+    this.auth.login(payload).subscribe({
+
+      next: (res: any) => {
+
+        alert(res.message);
+
+        this.otpSent = true;
+      },
+
+      error: (err) => {
+
+        alert(
+          err.error.message ||
+          'Login Failed'
+        );
+
+      }
+
+    });
+
   }
 
   verifyOTP() {
 
-    if (this.otp === '123456') {
-      alert('Login Successful');
+    const payload = {
+      email: this.email,
+      otp: this.otp
+    };
 
-      // this.router.navigate(['/dashboard']);
-    }
-    else {
-      alert('Invalid OTP');
-    }
+    this.auth.verifyOtp(payload).subscribe({
+
+      next: (res: any) => {
+
+        localStorage.setItem(
+          'token',
+          res.token
+        );
+
+        localStorage.setItem(
+          'user',
+          JSON.stringify(res.user)
+        );
+
+        alert('Login Successful');
+
+        this.router.navigate([
+          '/dashboard'
+        ]);
+
+      },
+
+      error: (err) => {
+
+        alert(
+          err.error.message ||
+          'Invalid OTP'
+        );
+
+      }
+
+    });
 
   }
-
 
 }

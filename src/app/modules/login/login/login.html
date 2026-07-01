@@ -40,7 +40,7 @@
 
         <div class="input-group">
           <label>Password</label>
-        <input type="password" [(ngModel)]="password" name="password" [disabled]="otpSent" placeholder="Enter Password">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Enter Password">
         </div>
 
      
@@ -48,7 +48,6 @@
         
   <button
     type="button"
-    *ngIf="!otpSent"
     (click)="login()">
 
     Login
@@ -75,7 +74,6 @@
 
   <button
     type="button"
-    *ngIf="otpSent"
     (click)="verifyOTP()">
 
     Verify OTP
